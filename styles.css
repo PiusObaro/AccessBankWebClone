@@ -60,6 +60,12 @@ nav {
   background-color: #fff;
 }
 
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .navItems > a {
   color: #000;
   text-transform: capitalize;
@@ -595,7 +601,8 @@ body {
   display: none;
 }
 
-#switch {
+#switch,
+.ham {
    display: none;
 }
 
@@ -607,15 +614,45 @@ body {
 
   .navRight {
     display: none;
+    height: 70vh;
+    width: 350px;
+    background-color: #000;
+    opacity: .7;
+    padding: 2rem;
+    position: absolute;
+    top: 4.6rem;
+    right: .5rem;
+  }
+
+  .navItems {
+    /* align-items: start; */
+    flex-direction: column;
+  }
+
+  .navItems > a {
+    font-size: 14px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+  }
+
+  #toggle:checked + .navRight {
+    display: block;
   }
 
   .accessLogo {
     margin-left: 0!important;
   }
 
+  .ham {
+    display: block;
+    font-size: 1.5rem;
+  }
+
   .hamburger {
     display: block;
     font-size: 1.5rem;
+    position: absolute;
+    right: 0%;
   }
 
   .topLeftLink {
@@ -691,4 +728,13 @@ body {
    margin-bottom: 2rem;
    border-radius: 2rem;
   }
+
+  .tools-container {
+    grid-template-columns: 1fr;
+    width: 70%;
+    margin-left: 5rem;
+    
+  }
+
+
 }
